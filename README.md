@@ -1,4 +1,5 @@
-# Folder Structure Extractor
+# extracto
+File and folder structure extractor, outputs a json file.
 
 ## Installation
 
