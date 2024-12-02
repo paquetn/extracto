@@ -6,10 +6,8 @@ import argparse
 def load_config(config_path: str) -> dict:
     """
     Loads the configuration from a JSON file.
-
     Args:
         config_path (str): Path to the JSON config file.
-
     Returns:
         dict: Configuration dictionary.
     """
@@ -27,11 +25,9 @@ def load_config(config_path: str) -> dict:
 def extract_folder_structure(folder_path: str, excluded_folders: list) -> dict:
     """
     Extracts the folder structure from the selected folder onward and filters out specified folders.
-
     Args:
         folder_path (str): The path to the folder whose structure is to be extracted.
         excluded_folders (list): List of folder names to exclude from the structure.
-
     Returns:
         dict: The folder structure as a dictionary.
     """
@@ -39,7 +35,6 @@ def extract_folder_structure(folder_path: str, excluded_folders: list) -> dict:
     for root, dirs, files in os.walk(folder_path):
         # Remove excluded folders from the traversal
         dirs[:] = [d for d in dirs if d not in excluded_folders]
-
         # Build the nested folder structure
         relative_path = os.path.relpath(root, folder_path)
         current_folder = folder_structure
@@ -54,7 +49,6 @@ def extract_folder_structure(folder_path: str, excluded_folders: list) -> dict:
 def save_structure_to_json(folder_structure: dict, output_path: str):
     """
     Saves the folder structure to a JSON file.
-
     Args:
         folder_structure (dict): The folder structure to be saved.
         output_path (str): The path to the output JSON file.
@@ -77,16 +71,22 @@ def main():
     parser.add_argument(
         "folder_path",
         type=str,
-        help="The path to the folder whose structure is to be extracted.",
+        nargs="?",
+        default=os.getcwd(),
+        help="The path to the folder whose structure is to be extracted (default: current working directory).",
     )
     parser.add_argument(
-        "output_path", type=str, help="The path to the output JSON file."
+        "output_path",
+        type=str,
+        nargs="?",
+        default=os.path.join(os.getcwd(), "output.json"),
+        help="The path to the output JSON file (default: output.json in the current working directory).",
     )
     parser.add_argument(
         "--config",
         type=str,
-        default="config.json",
-        help="Path to the JSON configuration file (default: config.json).",
+        default=os.path.join(os.path.dirname(__file__), "config.json"),
+        help="Path to the JSON configuration file (default: config.json in the script directory).",
     )
     args = parser.parse_args()
 
