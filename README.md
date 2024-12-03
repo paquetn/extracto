@@ -1,18 +1,66 @@
 # extracto
 File and folder structure extractor, outputs a json file.
 
-## Installation
+## Prerequisites
 
-To clone the repository, run the following command:
+- Python 3.6 or higher
+- `pip` (Python package installer)
+- `pipx` (https://github.com/pypa/pipx)
+- Cloning the repository
 ```sh
 git clone https://github.com/paquetn/extracto
 ```
 
+## Installation
+
 To install the tool, run the following command in the root directory of the project:
 ```sh
-pip install -e .
+pipx install .
 ```
 
+## Running the Tool Without Installation
+
+You can run the tool directly without installing it by using `python` or `python3`:
+
+### Windows
+1. Open Command Prompt:
+   - Press `Win + R`, type `cmd`, and press `Enter`.
+
+2. Navigate to the root directory of the project:
+   ```sh
+   cd path\to\extracto
+   ```
+
+3. Run the tool:
+   ```sh
+   python -m extracto
+   ```
+
+4. Alternatively, specify a different folder and output file:
+   ```sh
+   python -m extracto path\to\folder path\to\output.json
+   ```
+
+### macOS/Linux
+1. Open Terminal:
+   - On macOS: Press `Cmd + Space`, type `Terminal`, and press `Enter`.
+   - On Linux: Press `Ctrl + Alt + T` or open Terminal from Applications.
+
+
+3. Navigate to the root directory of the project:
+   ```sh
+   cd /path/to/extracto
+   ```
+
+4. Run the tool:
+   ```sh
+   python -m extracto
+   ```
+
+5. Alternatively, specify a different folder and output file:
+   ```sh
+   python -m extracto /path/to/folder /path/to/output.json
+   ```
 
 ## Running the Tool
 

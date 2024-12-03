@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+import pkg_resources
 
 
 def load_config(config_path: str) -> dict:
@@ -85,8 +86,8 @@ def main():
     parser.add_argument(
         "--config",
         type=str,
-        default=os.path.join(os.path.dirname(__file__), "config.json"),
-        help="Path to the JSON configuration file (default: config.json in the script directory).",
+        default=pkg_resources.resource_filename(__name__, "config.json"),
+        help="Path to the JSON configuration file (default: config.json in the package).",
     )
     args = parser.parse_args()
 

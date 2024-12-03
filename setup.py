@@ -6,10 +6,11 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "extracto=extracto.extract_structure:main",
+            "extracto=app.extract_structure:main",
         ],
     },
     install_requires=[],
+    include_package_data=True,
     author="Nicolas Paquet",
     author_email="nick@averagecadmanager.ca",
     description="A tool to extract folder structure and save it as a JSON file.",
