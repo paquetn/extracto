@@ -1,5 +1,14 @@
-# extracto
-File and folder structure extractor, outputs a json file.
+# Folder Structure Extractor
+
+File and folder structure extractor, outputs a JSON file.
+
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Tool Without Installation](#running-the-tool-without-installation)
+  - [Windows](#windows)
+  - [macOS/Linux](#macoslinux)
+- [Additional Notes](#additional-notes)
 
 ## Prerequisites
 
@@ -46,51 +55,19 @@ You can run the tool directly without installing it by using `python` or `python
    - On macOS: Press `Cmd + Space`, type `Terminal`, and press `Enter`.
    - On Linux: Press `Ctrl + Alt + T` or open Terminal from Applications.
 
-
-3. Navigate to the root directory of the project:
+2. Navigate to the root directory of the project:
    ```sh
    cd /path/to/extracto
    ```
 
-4. Run the tool:
+3. Run the tool:
    ```sh
    python -m extracto
    ```
 
-5. Alternatively, specify a different folder and output file:
+4. Alternatively, specify a different folder and output file:
    ```sh
    python -m extracto /path/to/folder /path/to/output.json
-   ```
-
-## Running the Tool
-
-### Windows
-1. Open Command Prompt:
-   - Press `Win + R`, type `cmd`, and press `Enter`.
-
-2. Run the tool:
-   ```sh
-   extracto
-   ```
-
-3. Alternatively, specify a different folder and output file:
-   ```sh
-   extracto path\to\folder path\to\output.json
-   ```
-
-### macOS/Linux
-1. Open Terminal:
-   - On macOS: Press `Cmd + Space`, type `Terminal`, and press `Enter`.
-   - On Linux: Press `Ctrl + Alt + T` or open Terminal from Applications.
-
-2. Run the tool:
-   ```sh
-   extracto
-   ```
-
-3. Alternatively, specify a different folder and output file:
-   ```sh
-   extracto /path/to/folder /path/to/output.json
    ```
 
 ## Additional Notes
